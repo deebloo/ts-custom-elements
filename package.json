@@ -1,0 +1,22 @@
+{
+  "name": "ls-map",
+  "version": "1.0.0",
+  "description": "Custom Element for Main LiveSafe Map",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "webpack": "webpack",
+    "tsc": "tsc --declaration",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@webcomponents/custom-elements": "^1.0.0-alpha.3",
+    "awesome-typescript-loader": "^2.2.4",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.6",
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "2.1.0-beta.10"
+  }
+}
