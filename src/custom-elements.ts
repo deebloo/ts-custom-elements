@@ -5,6 +5,12 @@ export interface CustomElementConfig {
   };
 }
 
+/**
+ * @CustomElement({
+ *   tagName: 'my-element'
+ * })
+ * class MyElement extends HTMLElement { }
+ */
 export const CustomElement = (config: CustomElementConfig) => {
   return (element) => {
     customElements.define(config.tagName, element, config.options);
