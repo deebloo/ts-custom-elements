@@ -1,6 +1,10 @@
 # ts-custom-elements
 Typescript interfaces and decorators for custom elements v1
 
+```bash
+npm i --save ts-custom-elements
+```
+
 example:
 ```ts
 import { CustomElement, OnConnected, OnDisconnected } from 'ts-custom-elements';
