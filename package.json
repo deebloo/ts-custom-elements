@@ -1,14 +1,8 @@
 {
   "name": "ts-custom-elements",
   "version": "1.0.0",
-  "description": "Typescript definitions and decorators for Custom Elements",
+  "description": "Typescript interfaces and decorators for custom elements v1",
   "main": "index.ts",
-  "scripts": {
-    "start": "npm test",
-    "test": "karma start"
-  },
-  "author": "deebloo",
-  "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",
@@ -22,5 +16,23 @@
     "tslint": "^3.15.1",
     "typescript": "^2.0.6",
     "webpack": "2.1.0-beta.25"
-  }
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deebloo/ts-custom-elements.git"
+  },
+  "keywords": [
+    "Custom Elements",
+    "Web Components",
+    "Typescript"
+  ],
+  "author": "deebloo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deebloo/ts-custom-elements/issues"
+  },
+  "homepage": "https://github.com/deebloo/ts-custom-elements#readme"
 }
