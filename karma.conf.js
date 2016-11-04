@@ -3,11 +3,24 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'index.js',
-      'tests/**.spec.js'
+      { pattern: './test/index.ts', watched: false}
     ],
     exclude: [],
-    preprocessors: {},
+    preprocessors: {
+      './test/index.ts': ['webpack']
+    },
+    webpack: {
+      resolve: {
+        extensions: ['.ts', '.js']
+      },
+      module: {
+        loaders: [{
+          test: /\.ts$/,
+          exclude: /(node_modules)/,
+          loader: 'awesome-typescript-loader'
+        }]
+      },
+    },
     reporters: ['progress'],
     port: 9876,
     colors: true,
