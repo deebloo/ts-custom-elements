@@ -1,15 +1,19 @@
-import './shim';
+import '../shim';
 import '@webcomponents/custom-elements/custom-elements.min';
 
-import { CustomElement, OnConnected } from '../src/custom-elements';
+import { CustomElement, OnConnected, OnDisconnected } from './custom-elements';
 
 describe('Custom Elements', () => {
   @CustomElement({
     tagName: 'foo-bar'
   })
-  class TestElement extends HTMLElement implements OnConnected {
+  class TestElement extends HTMLElement implements OnConnected, OnDisconnected {
     connectedCallback() {
-      this.innerHTML = 'Hello World';
+      this.innerHTML = 'Connected!';
+    }
+
+    disconnectedCallback() {
+      this.innerHTML = 'Disconnected!';
     }
   }
 
@@ -21,6 +25,6 @@ describe('Custom Elements', () => {
   });
 
   it('should create a new element', () => {
-    expect(element.textContent).toBe('Hello World');
+    expect(element.textContent).toBe('Connected!');
   });
 });

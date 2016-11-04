@@ -3,11 +3,11 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      { pattern: './test/index.ts', watched: false}
+      { pattern: './src/test.ts', watched: false}
     ],
     exclude: [],
     preprocessors: {
-      './test/index.ts': ['webpack']
+      './src/test.ts': ['webpack']
     },
     webpack: {
       resolve: {

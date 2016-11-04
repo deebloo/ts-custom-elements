@@ -1,16 +1,14 @@
 {
-  "name": "ls-map",
+  "name": "ts-custom-elements",
   "version": "1.0.0",
-  "description": "Custom Element for Main LiveSafe Map",
-  "main": "index.js",
+  "description": "Typescript definitions and decorators for Custom Elements",
+  "main": "index.ts",
   "scripts": {
-    "start": "webpack-dev-server",
-    "webpack": "webpack",
-    "tsc": "tsc --declaration",
+    "start": "npm test",
     "test": "karma start"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "deebloo",
+  "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/node": "^6.0.42",

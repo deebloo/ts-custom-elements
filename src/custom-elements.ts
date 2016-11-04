@@ -5,30 +5,24 @@ export interface CustomElementConfig {
   };
 }
 
-/**
- * @CustomElement({
- *   tagName: 'my-element'
- * })
- * class MyElement extends HTMLElement { }
- */
 export const CustomElement = (config: CustomElementConfig) => {
   return (element) => {
     customElements.define(config.tagName, element, config.options);
-  }
-}
+  };
+};
 
 export interface OnConnected {
   connectedCallback(): void;
 }
 
 export interface OnDisconnected {
-  disconnectedCallback();
+  disconnectedCallback(): void;
 }
 
 export interface OnAttributeChanged {
-  attributeChangedCallback(attrName?: string, oldVal?: string, newVal?: string);
+  attributeChangedCallback(attrName?: string, oldVal?: string, newVal?: string): void;
 }
 
 export interface OnAdopted {
-  adoptedCallback();
+  adoptedCallback(): void;
 }
